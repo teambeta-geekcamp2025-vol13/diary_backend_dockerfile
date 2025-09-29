@@ -13,9 +13,11 @@
   },
   "devDependencies": {
     "@supabase/supabase-js": "^2.39.0",
+    "@types/node": "^24.5.2",
     "drizzle-kit": "^0.28.0",
     "nodemon": "^2.0.0",
     "pg": "8.16.3",
+    "supabase": "^2.47.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.0.0"
   },

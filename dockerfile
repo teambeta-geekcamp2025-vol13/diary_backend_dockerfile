@@ -10,7 +10,13 @@ RUN npm install
 
 # ソースコードをコピー
 COPY . .
-
+RUN apt update
+RUN apt install -y docker.io
+#systemctl start docker
+RUN npm create hono@latest src -- --template=deno
+RUN npx tsc --init
 # 開発用に nodemon/ts-node で起動
 EXPOSE 3000
+
+
 CMD ["npx", "nodemon", "--watch", "src", "--exec", "ts-node", "src/index.ts"]
