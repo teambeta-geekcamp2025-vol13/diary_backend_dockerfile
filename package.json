@@ -1,0 +1,26 @@
+{
+  "name": "diary",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "@hono/node-server": "^1.19.5",
+    "drizzle-orm": "^0.36.0",
+    "hono": "^4.9.9"
+  },
+  "devDependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "drizzle-kit": "^0.28.0",
+    "nodemon": "^2.0.0",
+    "pg": "8.16.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec ts-node src/index.ts"
+  }
+}
