@@ -12,6 +12,7 @@
     "hono": "^4.9.9"
   },
   "devDependencies": {
+    "@google/genai": "^1.21.0",
     "@supabase/supabase-js": "^2.39.0",
     "@types/node": "^24.5.2",
     "drizzle-kit": "^0.28.0",

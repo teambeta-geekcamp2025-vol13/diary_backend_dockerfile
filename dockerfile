@@ -7,7 +7,8 @@ WORKDIR /app
 COPY package*.json ./
 
 RUN npm install -g npm@11.6.1
-RUN npm install -g deno
+RUN npm install -g deno && deno upgrade
+RUN deno add npm:@google/genai
 RUN npm install  
 
 # ソースコードをコピー
