@@ -10,6 +10,8 @@ RUN npm install -g npm@11.6.1
 RUN npm install -g deno && deno upgrade
 RUN deno add npm:@google/genai
 RUN deno add npm:@google-cloud/vision
+RUN deno add npm:drizzle-kit
+RUN deno add npm:drizzle-orm/pg-core
 RUN npm install  
 
 # ソースコードをコピー
