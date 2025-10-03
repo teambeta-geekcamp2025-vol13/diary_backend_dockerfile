@@ -1,25 +1,26 @@
 FROM node:22
 
+RUN git clone https://github.com/teambeta-geekcamp2025-vol13/memoru-diary
 # 作業ディレクトリ
-WORKDIR /app
+WORKDIR /memoru-diary
 
 # 依存関係をコピーしてインストール
 COPY package*.json ./
 
 RUN npm install -g npm@11.6.1
-RUN npm install -g deno && deno upgrade
-RUN deno add npm:@google/genai
-RUN deno add npm:@google-cloud/vision
-RUN deno add npm:drizzle-kit
-RUN deno add npm:drizzle-orm/pg-core
+#RUN npm install -g deno && deno upgrade
+#RUN deno add npm:@google/genai
+#RUN deno add npm:@google-cloud/vision
+#RUN deno add npm:drizzle-kit
+#RUN deno add npm:drizzle-orm/pg-core
 RUN npm install  
-
 # ソースコードをコピー
 COPY . .
 RUN apt update
-RUN apt install -y docker.io
-#systemctl start docker
+#RUN apt install -y docker.io
 
-RUN npm create hono@latest src -- --template=deno
+#RUN npm create hono@latest src -- --template=deno
 RUN npx tsc --init
-CMD ["npx", "nodemon", "--watch", "src", "--exec", "ts-node", "src/index.ts"]
+
+
+#CMD ["npx", "nodemon", "--watch", "src", "--exec", "ts-node", "src/index.ts"]
